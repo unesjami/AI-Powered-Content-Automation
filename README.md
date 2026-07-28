@@ -1,408 +1,210 @@
-**# AI-Telegram-Content-Automation**
+# AI-Powered-Content-Automation
 
+An AI-powered automation system that analyzes images, generates intelligent captions, and publishes content automatically to Telegram channels.
 
+---
 
-**An AI-powered automation system that analyzes images, generates intelligent captions, and publishes content automatically to Telegram channels.**
+## Overview
 
+Managing content for Telegram channels requires time for selecting media, writing captions, formatting posts, and publishing consistently.
 
+This project automates the complete content workflow by combining Artificial Intelligence, image analysis, and Telegram automation.
 
-**## Overview**
+The system can be adapted for technology channels, educational platforms, news communities, and other content-driven platforms.
 
+---
 
+## Features
 
-**Managing content for Telegram channels requires time for selecting media, writing captions, formatting posts, and publishing consistently.**
+- 🤖 AI-powered image analysis and caption generation
+- 🖼️ Automatic image processing workflow
+- ✍️ Intelligent content generation using AI
+- 📢 Automated Telegram channel publishing
+- 📁 Automatic media organization
+- 🔄 Retry and error handling system
+- 📧 Email execution reports
+- ⚙️ Configurable automation workflow
 
+---
 
+## How It Works
 
-**This project automates the entire content workflow by combining Artificial Intelligence, image analysis, and Telegram automation.**
+The automation workflow follows these steps:
 
+```text
+Images Folder
+      |
+      v
+Select Images
+      |
+      v
+AI Image Analysis
+      |
+      v
+Generate Caption
+      |
+      v
+Format Content
+      |
+      v
+Publish to Telegram
+      |
+      v
+Move Processed Files
+      |
+      v
+Send Execution Report
+```
 
+---
 
-**The system can be adapted for technology channels, educational platforms, news channels, and other content-driven communities.**
+## Use Cases
 
+This automation system can be used for:
 
+- Technology channels
+- Educational communities
+- News and information channels
+- Product content automation
+- AI-assisted social media workflows
+- Automated publishing systems
 
-**---**
+---
 
+## Technologies
 
+- Python
+- AI API Integration
+- Gemini API
+- Telegram Bot API
+- SMTP Email Service
+- Pillow
+- Requests
 
-**## Features**
+---
 
+## Project Structure
 
+```text
+AI-Powered-Content-Automation/
 
-**- 🤖 AI-powered image analysis and caption generation**
+├── main.py
+├── requirements.txt
+├── .env.example
+├── .gitignore
+├── README.md
 
-**- 🖼️ Automatic image processing workflow**
+├── assets/
+│   ├── channel_logo.png
+│   └── group_logo.jpg
 
-**- ✍️ Intelligent content generation using AI**
+├── media/
+│   ├── images/
+│   └── used_images/
 
-**- 📢 Automated Telegram channel publishing**
+├── screenshots/
+│   ├── console_execution.png
+│   ├── telegram_result.png
+│   └── email_report.png
 
-**- 📁 Media file management**
+└── docs/
+    └── workflow.md
+```
 
-**- 🔄 Retry and error handling system**
+---
 
-**- 📧 Email execution reports**
+## Installation & Setup
 
-**- ⚙️ Configurable automation workflow**
+### 1. Clone Repository
 
+```bash
+git clone https://github.com/unesjami/AI-Powered-Content-Automation.git
+```
 
+### 2. Install Dependencies
 
-**---**
+```bash
+pip install -r requirements.txt
+```
 
+### 3. Configure Environment Variables
 
+Create a `.env` file based on `.env.example` and add your own credentials:
 
-**## How It Works**
+```env
+GEMINI_API_KEY=your_api_key_here
 
+TELEGRAM_BOT_TOKEN=your_bot_token_here
 
+CHANNEL_ID=your_channel_id
 
-**The automation workflow follows these steps:**
+EMAIL_ADDRESS=your_email
 
+EMAIL_PASSWORD=your_password
+```
 
+### 4. Run Application
 
-**```text**
+```bash
+python main.py
+```
 
-**┌─────────────────────┐**
+---
 
-**│    Images Folder    │**
+## Screenshots
 
-**└──────────┬──────────┘**
+### Console Execution
 
-&#x20;          **↓**
+![Console Execution](screenshots/console_execution.png)
 
-**┌─────────────────────┐**
+### Telegram Result
 
-**│  Select Images      │**
+![Telegram Result](screenshots/telegram_result.png)
 
-**└──────────┬──────────┘**
+### Email Report
 
-&#x20;          **↓**
+![Email Report](screenshots/email_report.png)
 
-**┌─────────────────────┐**
+---
 
-**│ AI Image Analysis   │**
+## Security
 
-**└──────────┬──────────┘**
+Sensitive information such as:
 
-&#x20;          **↓**
+- API keys
+- Telegram bot tokens
+- Email credentials
 
-**┌─────────────────────┐**
+must always be stored in environment variables and never uploaded to public repositories.
 
-**│ Generate Caption    │**
+---
 
-**└──────────┬──────────┘**
+## Documentation
 
-&#x20;          **↓**
+Additional project documentation:
 
-**┌─────────────────────┐**
+```
+docs/
+└── workflow.md
+```
 
-**│ Format Content      │**
+The workflow document explains the system process and automation logic.
 
-**└──────────┬──────────┘**
+---
 
-&#x20;          **↓**
+## License
 
-**┌─────────────────────┐**
+This project is licensed under the MIT License.
 
-**│ Publish to Telegram │**
+---
 
-**└──────────┬──────────┘**
+## Author
 
-&#x20;          **↓**
+Created as an AI automation engineering project demonstrating:
 
-**┌─────────────────────┐**
-
-**│ Move Processed      │**
-
-**│ Files               │**
-
-**└──────────┬──────────┘**
-
-&#x20;          **↓**
-
-**┌─────────────────────┐**
-
-**│ Send Execution      │**
-
-**│ Report              │**
-
-**└─────────────────────┘**
-
-**```**
-
-
-
-**---**
-
-
-
-**## Use Cases**
-
-
-
-**This automation system can be used for:**
-
-
-
-**- Technology channels**
-
-**- Educational communities**
-
-**- News and information channels**
-
-**- Product content automation**
-
-**- AI-assisted social media workflows**
-
-**- Automated publishing systems**
-
-
-
-**---**
-
-
-
-**## Technologies**
-
-
-
-**- Python**
-
-**- AI API Integration**
-
-**- Gemini API**
-
-**- Telegram Bot API**
-
-**- SMTP Email Service**
-
-**- Pillow**
-
-**- Requests**
-
-
-
-**---**
-
-
-
-**## Project Structure**
-
-
-
-**```text**
-
-**AI-Telegram-Content-Automation**
-
-**│**
-
-**├── main.py                    # Main application file**
-
-**├── requirements.txt           # Python dependencies**
-
-**├── .env.example               # Environment variables template**
-
-**├── README.md                  # Project documentation**
-
-**├── .gitignore                 # Ignored files**
-
-**│**
-
-**├── assets/                    # Project assets**
-
-**│   ├── channel\_logo.png**
-
-**│   └── group\_logo.jpg**
-
-**│**
-
-**├── media/                     # Media management**
-
-**│   ├── images/                # New images to process**
-
-**│   └── used\_images/            # Successfully posted images**
-
-**│**
-
-**├── screenshots/               # Project screenshots**
-
-**│   ├── console\_execution.png**
-
-**│   ├── telegram\_result.png**
-
-**│   └── email\_report.png**
-
-**│**
-
-**└── docs/                      # Documentation**
-
-&#x20;   **└── workflow.md**
-
-**```**
-
-
-
-**---**
-
-
-
-**## Setup**
-
-
-
-**### 1. Clone Repository**
-
-
-
-**```bash**
-
-**git clone https://github.com/yourusername/AI-Telegram-Content-Automation.git**
-
-**```**
-
-
-
-**### 2. Install Dependencies**
-
-
-
-**```bash**
-
-**pip install -r requirements.txt**
-
-**```**
-
-
-
-**### 3. Configure Environment Variables**
-
-
-
-**Create a `.env` file and add your API credentials:**
-
-
-
-**```env**
-
-**GEMINI\_API\_KEY=your\_api\_key\_here**
-
-
-
-**TELEGRAM\_BOT\_TOKEN=your\_bot\_token\_here**
-
-
-
-**CHANNEL\_ID=your\_channel\_id**
-
-
-
-**EMAIL\_ADDRESS=your\_email**
-
-
-
-**EMAIL\_PASSWORD=your\_password**
-
-**```**
-
-
-
-**### 4. Run Application**
-
-
-
-**```bash**
-
-**python main.py**
-
-**```**
-
-
-
-**---**
-
-
-
-**## Screenshots**
-
-
-
-**### Console Execution**
-
-
-
-**!\[Console Execution](screenshots/console\_execution.png)**
-
-
-
-**### Telegram Result**
-
-
-
-**!\[Telegram Result](screenshots/telegram\_result.png)**
-
-
-
-**### Email Report**
-
-
-
-**!\[Email Report](screenshots/email\_report.png)**
-
-
-
-**---**
-
-
-
-**## Security**
-
-
-
-**Sensitive information such as:**
-
-
-
-**- API keys**
-
-**- Bot tokens**
-
-**- Email credentials**
-
-
-
-**should be stored in environment variables and never committed to GitHub.**
-
-
-
-**---**
-
-
-
-**## License**
-
-
-
-**This project is licensed under the MIT License.**
-
-
-
-**---**
-
-
-
-**## Author**
-
-
-
-**Created as an AI automation engineering project demonstrating:**
-
-
-
-**- API integration**
-
-**- AI workflow automation**
-
-**- Python development**
-
-**- Real-world problem solving**
-
+- API integration
+- AI workflow automation
+- Python development
+- Real-world problem solving
+- Software engineering practices
+```
