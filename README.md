@@ -1,210 +1,117 @@
-# AI-Powered-Content-Automation
+# AI-Powered Content Automation
 
-An AI-powered automation system that analyzes images, generates intelligent captions, and publishes content automatically to Telegram channels.
+<p align="center">
+  <strong>An AI-assisted workflow that turns images into formatted Telegram channel posts.</strong>
+</p>
 
----
+<p align="center">
+  <img src="https://img.shields.io/badge/AI-Gemini-7c3aed?style=for-the-badge" alt="Gemini">
+  <img src="https://img.shields.io/badge/Platform-Telegram-229ED9?style=for-the-badge" alt="Telegram">
+  <img src="https://img.shields.io/badge/Python-Automation-2563eb?style=for-the-badge" alt="Python">
+  <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-14b8a6?style=for-the-badge" alt="MIT license"></a>
+</p>
 
 ## Overview
 
-Managing content for Telegram channels requires time for selecting media, writing captions, formatting posts, and publishing consistently.
+This project automates a practical content-publishing workflow: analyze source images, generate captions with Gemini, format a Telegram post, publish it to a channel, organize processed media, and send an execution report.
 
-This project automates the complete content workflow by combining Artificial Intelligence, image analysis, and Telegram automation.
+## Workflow
 
-The system can be adapted for technology channels, educational platforms, news communities, and other content-driven platforms.
-
----
+```mermaid
+flowchart TD
+    A[Source images] --> B[Select media]
+    B --> C[Gemini analysis]
+    C --> D[Caption formatting]
+    D --> E[Telegram publishing]
+    E --> F[Archive processed files]
+    F --> G[Email report]
+```
 
 ## Features
 
-- 🤖 AI-powered image analysis and caption generation
-- 🖼️ Automatic image processing workflow
-- ✍️ Intelligent content generation using AI
-- 📢 Automated Telegram channel publishing
-- 📁 Automatic media organization
-- 🔄 Retry and error handling system
-- 📧 Email execution reports
-- ⚙️ Configurable automation workflow
+- AI image analysis and caption generation
+- Automated Telegram channel publishing
+- Consistent caption formatting
+- Media selection and processed-file organization
+- Retry and error handling
+- Email execution reports
+- Environment-based configuration
 
----
-
-## How It Works
-
-The automation workflow follows these steps:
-
-```text
-Images Folder
-      |
-      v
-Select Images
-      |
-      v
-AI Image Analysis
-      |
-      v
-Generate Caption
-      |
-      v
-Format Content
-      |
-      v
-Publish to Telegram
-      |
-      v
-Move Processed Files
-      |
-      v
-Send Execution Report
-```
-
----
-
-## Use Cases
-
-This automation system can be used for:
-
-- Technology channels
-- Educational communities
-- News and information channels
-- Product content automation
-- AI-assisted social media workflows
-- Automated publishing systems
-
----
-
-## Technologies
+## Technology
 
 - Python
-- AI API Integration
 - Gemini API
 - Telegram Bot API
-- SMTP Email Service
+- SMTP
 - Pillow
 - Requests
 
----
-
-## Project Structure
+## Repository structure
 
 ```text
-AI-Powered-Content-Automation/
-
 ├── main.py
 ├── requirements.txt
 ├── .env.example
-├── .gitignore
-├── README.md
-
-├── assets/
-│   ├── channel_logo.png
-│   └── group_logo.jpg
-
-├── media/
-│   ├── images/
-│   └── used_images/
-
-├── screenshots/
-│   ├── console_execution.png
-│   ├── telegram_result.png
-│   └── email_report.png
-
-└── docs/
-    └── workflow.md
+├── docs/workflow.md
+└── screenshots/
+    ├── console_execution.png
+    ├── telegram_result.png
+    └── email_report.png
 ```
 
----
+Runtime media directories are created or supplied locally and are intentionally excluded from version control.
 
-## Installation & Setup
-
-### 1. Clone Repository
+## Setup
 
 ```bash
 git clone https://github.com/unesjami/AI-Powered-Content-Automation.git
-```
-
-### 2. Install Dependencies
-
-```bash
+cd AI-Powered-Content-Automation
+python -m venv .venv
 pip install -r requirements.txt
-```
-
-### 3. Configure Environment Variables
-
-Create a `.env` file based on `.env.example` and add your own credentials:
-
-```env
-GEMINI_API_KEY=your_api_key_here
-
-TELEGRAM_BOT_TOKEN=your_bot_token_here
-
-CHANNEL_ID=your_channel_id
-
-EMAIL_ADDRESS=your_email
-
-EMAIL_PASSWORD=your_password
-```
-
-### 4. Run Application
-
-```bash
+cp .env.example .env
 python main.py
 ```
 
----
+On Windows, copy `.env.example` to `.env` manually before running the application.
 
-## Screenshots
+## Configuration
 
-### Console Execution
+| Variable | Purpose |
+|---|---|
+| `GEMINI_API_KEY` | Gemini API credential |
+| `TELEGRAM_BOT_TOKEN` | Telegram bot token |
+| `CHANNEL_ID` | Destination channel identifier |
+| `EMAIL_ADDRESS` | Sender address for reports |
+| `EMAIL_PASSWORD` | Email app password or credential |
 
-![Console Execution](screenshots/console_execution.png)
+Never commit the populated `.env` file.
 
-### Telegram Result
+## Results
 
-![Telegram Result](screenshots/telegram_result.png)
+### Telegram output
 
-### Email Report
+![Telegram result](screenshots/telegram_result.png)
 
-![Email Report](screenshots/email_report.png)
+### Execution report
 
----
+![Console execution](screenshots/console_execution.png)
 
-## Security
-
-Sensitive information such as:
-
-- API keys
-- Telegram bot tokens
-- Email credentials
-
-must always be stored in environment variables and never uploaded to public repositories.
-
----
+![Email report](screenshots/email_report.png)
 
 ## Documentation
 
-Additional project documentation:
+See [docs/workflow.md](docs/workflow.md) for the detailed workflow.
 
-```
-docs/
-└── workflow.md
-```
+## Operational notes
 
-The workflow document explains the system process and automation logic.
-
----
+- API quotas and Telegram limits depend on the accounts and services used.
+- Keep only one scheduled instance active if duplicate posts must be avoided.
+- Test with a private channel before using a production destination.
 
 ## License
 
-This project is licensed under the MIT License.
-
----
+Released under the [MIT License](LICENSE).
 
 ## Author
 
-Created as an AI automation engineering project demonstrating:
-
-- API integration
-- AI workflow automation
-- Python development
-- Real-world problem solving
-- Software engineering practices
-```
+Created by [Unes Jami](https://github.com/unesjami).
